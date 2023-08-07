@@ -49,12 +49,16 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  position: relative;
 }
 
 footer {
+  // text-align: center;
+  padding: 1rem;
   position: absolute;
   bottom: 0;
-  padding: 1rem;
+  left: 40%;
   font-size: 0.8rem;
   color: $color-accent;
+  white-space: nowrap;
 }
