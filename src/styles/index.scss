@@ -1,0 +1,47 @@
+@import "./variables.scss";
+
+/** Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/** App Styles **/
+
+body {
+  font-family: $font-family;
+  background-color: $color-secondary-800;
+  color: white;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
