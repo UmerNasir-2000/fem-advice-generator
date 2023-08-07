@@ -13,9 +13,11 @@ const useFetch = () => {
     getAdvice().then((data) => {
       setAdvice(new AdviceModel(data.slip.id, data.slip.advice))
     })
+
+    return () => new AbortController().abort()
   }, [])
 
-  return { advice }
+  return { advice, setAdvice }
 }
 
 export default useFetch

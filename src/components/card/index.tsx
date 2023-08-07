@@ -6,14 +6,17 @@ import classes from "./styles.module.scss"
 
 type AdviceCardProps = {
   advice: AdviceModel
+  setAdvice: React.Dispatch<React.SetStateAction<AdviceModel>>
 }
 
 const AdviceCard = (props: AdviceCardProps) => {
-  const { advice } = props
+  const { advice, setAdvice } = props
 
-  const onDiceClick = useCallback(() => {
-    alert("Hello")
-  }, [])
+  const onDiceClick = useCallback(async () => {
+    const response = await fetch("https://api.adviceslip.com/advice")
+    const data = await response.json()
+    setAdvice(new AdviceModel(data.slip.id, data.slip.advice))
+  }, [setAdvice])
 
   return (
     <article className={classes.card}>
