@@ -28,6 +28,10 @@
     font-size: $font-size-xl;
     text-align: center;
     font-weight: $font-weight-bold;
+
+    + img {
+      margin-top: 1.5rem;
+    }
   }
 
   button {
@@ -35,9 +39,22 @@
     border: none;
     cursor: pointer;
     background-color: $color-primary;
+    border-radius: 80%;
+    padding: 1rem;
+    transform: translateY(50%);
+    margin-block: -1.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 1s ease-in-out;
 
     img {
       z-index: 1;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px $color-primary, 0 0 30px $color-primary,
+        0 0 40px $color-primary;
     }
   }
 }
