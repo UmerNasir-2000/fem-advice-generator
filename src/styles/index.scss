@@ -62,3 +62,9 @@ footer {
   color: $color-accent;
   white-space: nowrap;
 }
+
+@media (max-width: 375px) {
+  body {
+    background-color: lightblue;
+  }
+}
