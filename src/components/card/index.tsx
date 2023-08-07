@@ -1,4 +1,5 @@
 import AdviceModel from "../../models/advice.model"
+import classes from "./styles.module.scss"
 
 type AdviceCardProps = {
   advice: AdviceModel
@@ -7,9 +8,9 @@ type AdviceCardProps = {
 const AdviceCard = (props: AdviceCardProps) => {
   const { advice } = props
   return (
-    <div>
+    <article className={classes.card}>
       {advice.id} {advice.advice}
-    </div>
+    </article>
   )
 }
 
