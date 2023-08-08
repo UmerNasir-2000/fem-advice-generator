@@ -9,7 +9,7 @@ const App = () => {
       <main>
         {advice && <AdviceCard advice={advice} setAdvice={setAdvice} />}
       </main>
-      <footer>
+      {/* <footer>
         Challenge by
         <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>
           Frontend Mentor
@@ -19,7 +19,7 @@ const App = () => {
           Umer Nasir
         </a>
         .
-      </footer>
+      </footer> */}
     </>
   )
 }
