@@ -22,21 +22,25 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-*,
-*::before,
-*::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
-}
-
 a {
   text-decoration: none;
   color: white;
 }
 
 /** App Styles **/
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Starting position */
+  }
+  100% {
+    transform: rotate(360deg); /* Ending position (full circle) */
+  }
+}
+
+.roll {
+  animation: rotate 0.3s linear infinite;
+}
 
 body {
   font-family: $font-family;
@@ -47,24 +51,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  // position: relative;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-// footer {
-//   padding: 1rem;
-//   position: absolute;
-//   bottom: 0;
-//   left: 40%;
-//   font-size: 0.8rem;
-//   color: $color-accent;
-//   white-space: nowrap;
-// }
+footer {
+  padding: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: $color-accent;
+  white-space: nowrap;
+  margin-top: 2rem;
+}
 
 @media (max-width: 560px) {
   body {
     overflow: hidden;
-    // margin-inline: auto;
     max-width: 100%;
+  }
+
+  footer {
+    text-align: center;
   }
 }

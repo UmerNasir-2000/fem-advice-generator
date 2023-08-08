@@ -2,14 +2,21 @@ import AdviceCard from "./components/card"
 import useFetch from "./hooks/useFetch"
 
 const App = () => {
-  const { advice, setAdvice } = useFetch()
+  const { advice, setAdvice, loading, setLoading } = useFetch()
 
   return (
     <>
       <main>
-        {advice && <AdviceCard advice={advice} setAdvice={setAdvice} />}
+        {advice && (
+          <AdviceCard
+            advice={advice}
+            setAdvice={setAdvice}
+            loading={loading}
+            setLoading={setLoading}
+          />
+        )}
       </main>
-      {/* <footer>
+      <footer>
         Challenge by
         <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>
           Frontend Mentor
@@ -19,7 +26,7 @@ const App = () => {
           Umer Nasir
         </a>
         .
-      </footer> */}
+      </footer>
     </>
   )
 }
